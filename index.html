@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takrim AI Studio | High-Velocity AI Automation & Custom Software</title>
+  <meta name="description"
+    content="We help businesses get more work done without hiring more employees through analysis-based AI automation and custom software development.">
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Lenis Smooth Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#6F00FF',
+              purpleHover: '#5900CC',
+              purpleLight: 'rgba(111, 0, 255, 0.08)',
+              purpleBorder: 'rgba(111, 0, 255, 0.25)',
+              black: '#000000',
+              ink: '#171827',
+              offwhite: '#F8F8F4',
+              surface: '#FFFFFF',
+              border: '#E0E0D9',
+              slateBorder: '#E4E4E7',
+              textPrimary: '#252525',
+              textSecondary: '#666660',
+              emerald: '#10B981'
+            }
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            inter: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles: Precise Design Rules, Infographics, Animations & User's Testimonial Styles -->
+  <style>
+    :root {
+      --purple: #6F00FF;
+      --purple-hover: #5900CC;
+      --black: #000000;
+      --ink: #171827;
+      --white: #FFFFFF;
+      --off-white: #F8F8F4;
+      --text: #252525;
+      --text-muted: #666660;
+      --border: #E0E0D9;
+      --border-slate: #E4E4E7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    /* Lenis Smooth Scroll Rules */
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--off-white);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-heading {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Primary CTA Button */
+    .btn-primary {
+      background-color: var(--purple);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -2px rgba(111, 0, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--purple-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -2px rgba(111, 0, 255, 0.45);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* Secondary Dark Button */
+    .btn-secondary {
+      background-color: var(--ink);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-secondary:hover {
+      background-color: #26283E;
+      transform: translateY(-1px);
+    }
+
+    /* Outline Button */
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-outline:hover {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    /* How We Can Help You Rows */
+    .benefit-row {
+      border-bottom: 1px solid var(--border);
+      transition: background-color 0.25s ease, padding 0.25s ease;
+    }
+
+    .benefit-row:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .benefit-row:hover {
+      background-color: #FFFFFF;
+    }
+
+    .benefit-arrow {
+      transition: transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .benefit-row:hover .benefit-arrow {
+      transform: rotate(45deg);
+      background-color: var(--purple);
+      color: #FFFFFF;
+    }
+
+    /* Infographic Timeline */
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-track {
+      position: absolute;
+      top: 36px;
+      left: 17px;
+      bottom: -16px;
+      width: 2px;
+      background-color: #E2D9F3;
+      z-index: 1;
+    }
+
+    .timeline-item:last-child .timeline-track {
+      display: none;
+    }
+
+    .step-marker {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--purple);
+      background-color: #FFFFFF;
+      color: var(--purple);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .timeline-item:hover .step-marker {
+      background-color: var(--purple);
+      color: #FFFFFF;
+      transform: scale(1.08);
+      box-shadow: 0 0 0 4px rgba(111, 0, 255, 0.15);
+    }
+
+    /* Service Card Hover Lift */
+    .service-card {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--purple) !important;
+      box-shadow: 0 12px 30px -6px rgba(23, 24, 39, 0.08);
+    }
+
+    /* Tool Card Hover */
+    .tool-card {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--purple);
+      box-shadow: 0 10px 24px -4px rgba(23, 24, 39, 0.06);
+    }
+
+    /* ========================================================
+       User-Provided Testimonials Styles (Strictly Preserved)
+       ======================================================== */
+    .testimonials {
+      padding: 80px 6%;
+      background: var(--off-white);
+    }
+
+    .testimonials-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .testimonials-heading {
+      max-width: 1240px;
+      margin: 0 auto 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .testimonial-card {
+      min-height: 380px;
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease;
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--purple);
+    }
+
+    .quote-mark {
+      color: var(--purple);
+      font-family: Georgia, serif;
+      font-size: 58px;
+      line-height: 0.8;
+      margin-bottom: 25px;
+    }
+
+    .testimonial-text {
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.8;
+      flex: 1;
+      padding-bottom: 28px;
+    }
+
+    .testimonial-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 22px;
+    }
+
+    .testimonial-author {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .video-card {
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #222;
+      border: 1px solid var(--border);
+      isolation: isolate;
+    }
+
+    .video-thumbnail {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .video-card:hover .video-thumbnail {
+      filter: grayscale(30%);
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.65) 0%,
+          transparent 35%,
+          transparent 65%,
+          rgba(0, 0, 0, 0.25) 100%);
+      pointer-events: none;
+    }
+
+    .video-author {
+      position: absolute;
+      top: 26px;
+      left: 26px;
+      right: 20px;
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 66px;
+      height: 66px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 50%;
+      background: var(--purple);
+      color: var(--white);
+      cursor: pointer;
+      z-index: 3;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .play-button:hover {
+      background: var(--black);
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    .play-button:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 4px;
+    }
+
+    .play-button svg {
+      width: 25px;
+      height: 25px;
+      margin-left: 4px;
+    }
+
+    .video-player {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      background: var(--black);
+    }
+
+    @media (max-width: 1023px) {
+      .testimonials {
+        padding: 60px 5%;
+      }
+
+      .testimonials-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .testimonial-card,
+      .video-card {
+        min-height: 350px;
+      }
+
+      .video-card {
+        grid-column: 1 / -1;
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .testimonials {
+        padding: 40px 20px;
+      }
+
+      .testimonials-heading {
+        margin-bottom: 28px;
+        font-size: clamp(30px, 8vw, 40px);
+        letter-spacing: -1px;
+      }
+
+      .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .testimonial-card {
+        min-height: 290px;
+        padding: 24px;
+      }
+
+      .quote-mark {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-text {
+        font-size: 15px;
+        padding-bottom: 25px;
+      }
+
+      .testimonial-author {
+        font-size: 15px;
+      }
+
+      .video-card {
+        grid-column: auto;
+        min-height: 380px;
+      }
+
+      .video-author {
+        top: 20px;
+        left: 20px;
+        font-size: 15px;
+      }
+
+      .play-button {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#F8F8F4] text-[#252525] antialiased">
+
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scrollProgressBar"
+    class="fixed top-0 left-0 h-[3px] bg-[#6F00FF] z-[9999] pointer-events-none transition-all duration-75"
+    style="width: 0%;"></div>
+
+  <!-- ========================================================
+       1. HEADER & NOTICE BAR
+       ======================================================== -->
+  <header class="sticky top-0 z-40 w-full" id="site-header">
+    <!-- Notice Bar (Top) -->
+    <div class="bg-[#6F00FF] text-white py-3 px-4 sm:px-6 relative flex items-center justify-center shadow-sm">
+      <!-- Mobile & Tablet Hamburger Menu Button (Left-hand side of notice) -->
+      <div class="flex items-center lg:hidden flex-shrink-0 z-30 absolute left-3 sm:left-6">
+        <button id="mobileMenuBtn" type="button" aria-label="Open navigation menu"
+          class="text-white p-2 rounded hover:bg-black/20 focus:outline-none focus:ring-2 focus:ring-white cursor-pointer transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notice Content & Action Button (Centered on all screens, especially desktop/laptop) -->
+      <div
+        class="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-center pl-10 sm:pl-12 lg:pl-0">
+        <div class="flex items-center gap-2 text-sm sm:text-base font-semibold tracking-wide">
+          <span>Get 20% off, contact now &rarr;</span>
+        </div>
+        <a href="#contact"
+          class="btn-primary bg-white text-[#6F00FF] hover:bg-black hover:text-white text-xs sm:text-sm px-4 sm:px-6 py-2 tracking-wider font-extrabold uppercase transition shadow-none">
+          LET'S GROW YOUR BUSINESS
+        </a>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation Bar (Black background with white text) -->
+    <nav class="hidden lg:block bg-[#000000] text-white border-b border-[#252525]">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <!-- Logo / Brand Identifier -->
+        <a href="#home"
+          class="font-heading font-black text-xl tracking-wider text-white hover:text-[#6F00FF] transition">
+          TAKRIM AI STUDIO
+        </a>
+
+        <!-- Desktop Nav Links (ALL CAPITALS) -->
+        <ul class="flex items-center space-x-8 text-sm font-bold tracking-wider uppercase font-heading">
+          <li><a href="#home" class="text-white hover:text-[#6F00FF] transition py-2">HOME</a></li>
+          <li><a href="#peoples-thoughts" class="text-white hover:text-[#6F00FF] transition py-2">PEOPLE’S THOUGHTS</a>
+          </li>
+          <li><a href="#our-work" class="text-white hover:text-[#6F00FF] transition py-2">OUR WORK</a></li>
+          <li><a href="#what-we-do" class="text-white hover:text-[#6F00FF] transition py-2">WHAT WE DO?</a></li>
+          <li><a href="#about-us" class="text-white hover:text-[#6F00FF] transition py-2">ABOUT US</a></li>
+        </ul>
+
+        <!-- Contact Us Button (ALL CAPITALS) -->
+        <a href="#contact"
+          class="text-xs font-extrabold tracking-widest uppercase bg-transparent text-white border border-white hover:bg-[#6F00FF] hover:border-[#6F00FF] px-5 py-2.5 rounded transition font-heading">
+          CONTACT US
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile & Tablet Slide Menu (Left side slide drawer, Black background, White text) -->
+  <div id="mobileDrawerBackdrop"
+    class="fixed inset-0 bg-black/60 z-[99] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobileDrawer"
+    class="fixed top-0 left-0 bottom-0 w-72 sm:w-80 bg-[#000000] text-white z-[100] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl border-r border-[#252525]">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-[#222222]">
+        <span class="font-heading font-black text-lg sm:text-xl tracking-wider text-white">
+          TAKRIM AI STUDIO
+        </span>
+        <button id="closeDrawerBtn" aria-label="Close navigation menu"
+          class="text-white/80 hover:text-white p-2 focus:outline-none cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Slide Menu Nav Options (ALL CAPITALS) -->
+      <nav class="mt-8">
+        <ul class="space-y-5 text-base font-bold tracking-wider uppercase font-heading">
+          <li><a href="#home" class="mobile-nav-link block text-white hover:text-[#6F00FF] transition py-1">HOME</a>
+          </li>
+          <li><a href="#peoples-thoughts"
+              class="mobile-nav-link block text-white hover:text-[#6F00FF] transition py-1">PEOPLE’S THOUGHTS</a></li>
+          <li><a href="#our-work" class="mobile-nav-link block text-white hover:text-[#6F00FF] transition py-1">OUR
+              WORK</a></li>
+          <li><a href="#what-we-do" class="mobile-nav-link block text-white hover:text-[#6F00FF] transition py-1">WHAT
+              WE DO?</a></li>
+          <li><a href="#about-us" class="mobile-nav-link block text-white hover:text-[#6F00FF] transition py-1">ABOUT
+              US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-[#222222] space-y-5">
+      <!-- Social Media Icons in Slide Menu -->
+      <div class="flex items-center justify-center gap-3">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/molla-md-takrim/" target="_blank" rel="noopener noreferrer"
+          aria-label="Takrim on LinkedIn"
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition hover:scale-110">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
+        </a>
+        <!-- X / Twitter -->
+        <a href="https://x.com/TakrimMolla1" target="_blank" rel="noopener noreferrer" aria-label="Takrim on X"
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition hover:scale-110">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/molla_md._takrim/" target="_blank" rel="noopener noreferrer"
+          aria-label="Takrim on Instagram"
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition hover:scale-110">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61560457536107" target="_blank" rel="noopener noreferrer"
+          aria-label="Takrim on Facebook"
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition hover:scale-110">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@Takrim_Human" target="_blank" rel="noopener noreferrer"
+          aria-label="Takrim on YouTube"
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition hover:scale-110">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+        </a>
+      </div>
+
+      <a href="#contact"
+        class="mobile-nav-link btn-primary w-full py-3 text-xs tracking-widest uppercase font-heading text-center">
+        CONTACT US
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       2. HERO SECTION
+       ======================================================== -->
+  <section id="home" class="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <!-- Responsive layout:
+         Laptop & Desktop: Left square video, Right heading, paragraph & button.
+         Mobile & Tablet: Video at top, heading, paragraph & button below. -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+      <!-- Video Column (Square Video) -->
+      <div class="w-full max-w-lg mx-auto lg:max-w-none">
+        <div
+          class="relative w-full aspect-square bg-[#171827] rounded-lg overflow-hidden border border-[#E0E0D9] shadow-md group">
+          <!-- Autoplaying Video (Muted by default, looped) -->
+          <video id="heroVideo" autoplay loop muted playsinline controls class="w-full h-full object-cover">
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Dedicated Mute/Unmute Control Pill -->
+          <div class="absolute bottom-4 right-4 z-20">
+            <button id="heroMuteBtn" type="button"
+              class="bg-[#171827]/90 hover:bg-[#6F00FF] text-white text-xs font-heading font-extrabold px-3 py-2 rounded-md shadow-lg backdrop-blur-sm flex items-center gap-2 border border-white/20 transition-all uppercase tracking-wider">
+              <svg id="heroMuteIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Muted icon by default -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+              </svg>
+              <span id="heroMuteLabel">UNMUTE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text & CTA Column -->
+      <div class="flex flex-col justify-center text-left">
+        <!-- Overline Eyebrow -->
+        <span class="text-xs font-heading font-extrabold tracking-[0.15em] text-[#6F00FF] uppercase mb-3">
+          AI AUTOMATION &amp; CUSTOM SOFTWARE
+        </span>
+
+        <!-- Heading: DO MORE WORK WITH A SMALL TEAM -->
+        <h1
+          class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#171827] tracking-tight leading-[1.08] uppercase mb-6">
+          DO MORE WORK<br>
+          <span class="text-[#6F00FF]">WITH A SMALL TEAM</span>
+        </h1>
+
+        <!-- Paragraph -->
+        <p class="text-base sm:text-lg lg:text-xl text-[#666660] leading-relaxed mb-8 max-w-xl font-normal">
+          We help businesses that do not have enough employees get more work done without hiring more employees or being
+          stressed all the time through analysis-based development.
+        </p>
+
+        <!-- Button: LET'S GROW YOUR BUSINESS -->
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#contact" class="btn-primary px-8 py-4 text-sm sm:text-base">
+            LET'S GROW YOUR BUSINESS
+          </a>
+          <a href="#what-we-do" class="btn-outline px-6 py-4 text-sm sm:text-base">
+            DISCOVER HOW &darr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. NUMBERS (HORIZONTAL STATISTICS SECTION)
+       Clean, direct, brutalist typography without cards/shadows/gradients/icons
+       ======================================================== -->
+  <section class="py-14 sm:py-20 border-y border-[#E0E0D9] bg-[#FFFFFF]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <!-- 4 Horizontal Statistics Grid -->
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-y-2 sm:divide-y-0 lg:divide-x divide-[#E0E0D9]">
+
+        <!-- Metric 1: 32% — AVERAGE COST REDUCTION -->
+        <div class="pt-6 sm:pt-0 lg:px-6 first:pl-0 text-left">
+          <div
+            class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#171827] tracking-tighter leading-none mb-3">
+            <span class="stat-number" data-target="32">32</span>%
+          </div>
+          <p class="font-heading font-extrabold text-xs sm:text-sm tracking-[0.1em] text-[#666660] uppercase">
+            AVERAGE COST REDUCTION
+          </p>
+        </div>
+
+        <!-- Metric 2: 10+ HRS — TIME SAVED PER WEEK -->
+        <div class="pt-6 sm:pt-0 lg:px-6 text-left">
+          <div
+            class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#171827] tracking-tighter leading-none mb-3">
+            <span class="stat-number" data-target="10">10</span>+ <span
+              class="text-2xl sm:text-3xl font-bold">HRS</span>
+          </div>
+          <p class="font-heading font-extrabold text-xs sm:text-sm tracking-[0.1em] text-[#666660] uppercase">
+            TIME SAVED PER WEEK
+          </p>
+        </div>
+
+        <!-- Metric 3: 24/7 — AUTOMATION AVAILABILITY -->
+        <div class="pt-6 sm:pt-0 lg:px-6 text-left">
+          <div
+            class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#6F00FF] tracking-tighter leading-none mb-3">
+            24/7
+          </div>
+          <p class="font-heading font-extrabold text-xs sm:text-sm tracking-[0.1em] text-[#666660] uppercase">
+            AUTOMATION AVAILABILITY
+          </p>
+        </div>
+
+        <!-- Metric 4: 100% — FOCUS ON BUSINESS GROWTH -->
+        <div class="pt-6 sm:pt-0 lg:px-6 text-left">
+          <div
+            class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#171827] tracking-tighter leading-none mb-3">
+            <span class="stat-number" data-target="100">100</span>%
+          </div>
+          <p class="font-heading font-extrabold text-xs sm:text-sm tracking-[0.1em] text-[#666660] uppercase">
+            FOCUS ON BUSINESS GROWTH
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. WHAT PEOPLE ARE THINKING ABOUT US (PEOPLE'S THOUGHTS)
+       Exact structure provided by user with seamless integration
+       ======================================================== -->
+  <section class="testimonials border-t border-[#E0E0D9]" id="peoples-thoughts">
+    <!-- Section heading -->
+    <h2 class="testimonials-heading">PEOPLE'S THOUGHTS</h2>
+
+    <div class="testimonials-container">
+      <!-- Testimonial 1 -->
+      <article class="testimonial-card">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p class="testimonial-text">
+          Thank You Takrim for making such a great website for me. It's very helpful for me ... Great Job Bro !!
+        </p>
+        <div class="testimonial-divider"></div>
+        <p class="testimonial-author">Deep Roy</p>
+      </article>
+
+      <!-- Testimonial 2 -->
+      <article class="testimonial-card">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p class="testimonial-text">
+          This tool is very helpful for me
+        </p>
+        <div class="testimonial-divider"></div>
+        <p class="testimonial-author">Rounak Pal</p>
+      </article>
+
+      <!-- Video Testimonial (No specific thumbnail) -->
+      <article class="video-card" id="videoTestimonial">
+        <video class="video-player" id="testimonialVideo" playsinline preload="metadata">
+          <source src="testimonial-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="testimonialOverlay"></div>
+        <p class="video-author" id="testimonialAuthor">Dwaipayan Jana</p>
+        <button class="play-button" id="playTestimonial" type="button"
+          aria-label="Play video testimonial from Dwaipayan Jana">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 3.5v17L21 12 7 3.5z" />
+          </svg>
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. FREE AI AGENTS FOR YOU, CREATED BY US (OUR WORK)
+       Layout:
+       Desktop & Laptop: 1-column, 2-row style
+       Mobile & Tablet: 2-column, 1-row style
+       Each card: Heading, paragraph, image, button
+       ======================================================== -->
+  <section id="our-work" class="py-16 sm:py-24 bg-[#FFFFFF] border-t border-[#E0E0D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+      <!-- Section Heading -->
+      <div class="max-w-4xl mb-12 sm:mb-16">
+        <span class="text-xs font-heading font-extrabold tracking-[0.15em] text-[#6F00FF] uppercase block mb-3">
+          PORTFOLIO &amp; FREE TOOLS
+        </span>
+        <h2
+          class="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-[#171827] tracking-tight uppercase leading-snug">
+          WE CREATED A FEW FREE AI AGENTS FOR YOU AS A TOKEN OF APPRECIATION.
+        </h2>
+      </div>
+
+      <!-- Tools Cards Grid:
+           Desktop & Laptop: 1-column, 2-row style (`lg:grid-cols-1`)
+           Mobile & Tablet: 2-column, 1-row style (`grid-cols-1 md:grid-cols-2`)
+      -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 lg:gap-10">
+
+        <!-- PROJECT CARD 01: AI Marketing Plan Generator -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-center justify-between">
+          <div class="w-full lg:w-1/2 flex flex-col justify-between order-2 lg:order-1">
+            <div>
+              <h3 class="font-heading font-black text-2xl sm:text-3xl text-[#171827] uppercase tracking-tight mb-3">
+                AI Marketing Plan Generator
+              </h3>
+              <p class="text-base text-[#666660] leading-relaxed mb-6 font-normal">
+                This will understand your business, your target audience, and your location, and, according to that, it
+                will give you a marketing plan.
+              </p>
+            </div>
+            <div>
+              <a href="https://www.hyperwing.co.in/" target="_blank" rel="noopener noreferrer"
+                class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading">
+                GET THE FREE TOOL
+              </a>
+            </div>
+          </div>
+          <!-- Card Image -->
+          <div class="w-full lg:w-1/2 order-1 lg:order-2 overflow-hidden rounded-md border border-[#E0E0D9]">
+            <img src="marketing-tool.jpg" alt="AI Marketing Plan Generator Interface"
+              class="w-full h-56 sm:h-64 lg:h-72 object-cover transition duration-300 hover:scale-105">
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 02: AI Agent for Linux Administration Work -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-center justify-between">
+          <div class="w-full lg:w-1/2 flex flex-col justify-between order-2 lg:order-1">
+            <div>
+              <h3 class="font-heading font-black text-2xl sm:text-3xl text-[#171827] uppercase tracking-tight mb-3">
+                AI Agent for Linux Administration Work
+              </h3>
+              <p class="text-base text-[#666660] leading-relaxed mb-6 font-normal">
+                This is an AI agent that automates common administrative tasks in Debian-based and RHEL Linux systems.
+              </p>
+            </div>
+            <div>
+              <a href="https://github.com/molla-md-takrim/Linuxhelper" target="_blank" rel="noopener noreferrer"
+                class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading">
+                GET THE FREE TOOL
+              </a>
+            </div>
+          </div>
+          <!-- Card Image -->
+          <div class="w-full lg:w-1/2 order-1 lg:order-2 overflow-hidden rounded-md border border-[#E0E0D9]">
+            <img src="linux-agent.jpg" alt="AI Agent for Linux Administration Dashboard"
+              class="w-full h-56 sm:h-64 lg:h-72 object-cover transition duration-300 hover:scale-105">
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       DEMO WORK CARDS (Directly after Free Tools section)
+       ======================================================== -->
+  <section id="demo-work" class="py-16 sm:py-24 bg-[#FFFFFF] border-t border-[#E0E0D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- DEMO CARD 01: Astraeus ERP -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <!-- Card Image -->
+            <a href="https://eu2uu88b.insforge.site/dashboard" target="_blank" rel="noopener noreferrer"
+              class="block overflow-hidden rounded-md border border-[#E0E0D9] mb-6 group">
+              <img src="demo-astraeus.png" alt="Astraeus ERP School Management System Demo"
+                class="w-full h-56 sm:h-64 object-cover object-top transition duration-300 group-hover:scale-105"
+                loading="lazy">
+            </a>
+            <!-- Minimal Details -->
+            <div class="font-heading font-black text-xl sm:text-2xl text-[#171827] uppercase tracking-tight mb-2">
+              Astraeus ERP
+            </div>
+            <p class="text-sm sm:text-base text-[#666660] leading-relaxed mb-6 font-normal">
+              A modern school management system for administrators, teachers, students, and parents.
+            </p>
+          </div>
+          <div>
+            <a href="https://eu2uu88b.insforge.site/dashboard" target="_blank" rel="noopener noreferrer"
+              class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading inline-flex items-center gap-2">
+              <span>EXPLORE DEMO</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- DEMO CARD 02: Patshala -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <!-- Card Image -->
+            <a href="https://molla-md-takrim.github.io/patshala/" target="_blank" rel="noopener noreferrer"
+              class="block overflow-hidden rounded-md border border-[#E0E0D9] mb-6 group">
+              <img src="demo-patshala.png" alt="Patshala Digital Invoices Demo"
+                class="w-full h-56 sm:h-64 object-cover object-top transition duration-300 group-hover:scale-105"
+                loading="lazy">
+            </a>
+            <!-- Minimal Details -->
+            <div class="font-heading font-black text-xl sm:text-2xl text-[#171827] uppercase tracking-tight mb-2">
+              Patshala Invoicing
+            </div>
+            <p class="text-sm sm:text-base text-[#666660] leading-relaxed mb-6 font-normal">
+              Eco-friendly digital invoicing and billing dashboard with client-side storage and PDF generator.
+            </p>
+          </div>
+          <div>
+            <a href="https://molla-md-takrim.github.io/patshala/" target="_blank" rel="noopener noreferrer"
+              class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading inline-flex items-center gap-2">
+              <span>EXPLORE DEMO</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- DEMO CARD 03: Mira -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <!-- Card Image -->
+            <a href="https://project2-7xb.pages.dev/" target="_blank" rel="noopener noreferrer"
+              class="block overflow-hidden rounded-md border border-[#E0E0D9] mb-6 group">
+              <img src="demo-mira.png" alt="Mira Interior & Architecture Studio Demo"
+                class="w-full h-56 sm:h-64 object-cover object-top transition duration-300 group-hover:scale-105"
+                loading="lazy">
+            </a>
+            <!-- Minimal Details -->
+            <div class="font-heading font-black text-xl sm:text-2xl text-[#171827] uppercase tracking-tight mb-2">
+              Mira Architecture
+            </div>
+            <p class="text-sm sm:text-base text-[#666660] leading-relaxed mb-6 font-normal">
+              Minimalist portfolio and booking platform for a luxury architecture and interior design studio.
+            </p>
+          </div>
+          <div>
+            <a href="https://project2-7xb.pages.dev/" target="_blank" rel="noopener noreferrer"
+              class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading inline-flex items-center gap-2">
+              <span>EXPLORE DEMO</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- DEMO CARD 04: Culinaire -->
+        <article
+          class="tool-card bg-white border border-[#E0E0D9] rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <!-- Card Image -->
+            <a href="https://project1-3ye.pages.dev/" target="_blank" rel="noopener noreferrer"
+              class="block overflow-hidden rounded-md border border-[#E0E0D9] mb-6 group">
+              <img src="demo-culinaire.png" alt="Culinaire Artisan Cooking Masterclasses Demo"
+                class="w-full h-56 sm:h-64 object-cover object-top transition duration-300 group-hover:scale-105"
+                loading="lazy">
+            </a>
+            <!-- Minimal Details -->
+            <div class="font-heading font-black text-xl sm:text-2xl text-[#171827] uppercase tracking-tight mb-2">
+              Culinaire Masterclasses
+            </div>
+            <p class="text-sm sm:text-base text-[#666660] leading-relaxed mb-6 font-normal">
+              Artisan cooking masterclasses and culinary academy website with seamless session reservations.
+            </p>
+          </div>
+          <div>
+            <a href="https://project1-3ye.pages.dev/" target="_blank" rel="noopener noreferrer"
+              class="btn-primary px-7 py-3.5 text-xs sm:text-sm tracking-wider uppercase font-heading inline-flex items-center gap-2">
+              <span>EXPLORE DEMO</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. WHAT WE DO? (SECTION ONE: HOW WE CAN HELP YOU?)
+       ======================================================== -->
+  <section id="what-we-do" class="py-16 sm:py-24 bg-[#F8F8F4] border-t border-[#E0E0D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+      <!-- Section Heading & Paragraph -->
+      <div class="max-w-3xl mb-12 sm:mb-16">
+        <h2
+          class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#171827] tracking-tight uppercase mb-4">
+          HOW WE CAN <span class="text-[#6F00FF]">HELP YOU?</span>
+        </h2>
+        <p class="text-base sm:text-lg text-[#666660]">
+          Through our analysis-based development, these are the things we can do for you.
+        </p>
+      </div>
+
+      <!-- 5 Full-Width Horizontal Benefit Rows -->
+      <div class="w-full">
+
+        <!-- Row 01 -->
+        <div class="benefit-row py-6 sm:py-7 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer">
+          <div class="flex items-center gap-6 sm:gap-10">
+            <span class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] tracking-wider">01</span>
+            <p class="font-heading font-bold text-lg sm:text-2xl text-[#171827]">
+              You will do <span class="text-[#6F00FF]">MORE WORK</span> with a small team.
+            </p>
+          </div>
+          <div
+            class="benefit-arrow w-10 h-10 rounded-full border border-[#E0E0D9] bg-white text-[#6F00FF] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Row 02 -->
+        <div class="benefit-row py-6 sm:py-7 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer">
+          <div class="flex items-center gap-6 sm:gap-10">
+            <span class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] tracking-wider">02</span>
+            <p class="font-heading font-bold text-lg sm:text-2xl text-[#171827]">
+              You will <span class="text-[#6F00FF]">MAKE MORE MONEY</span>.
+            </p>
+          </div>
+          <div
+            class="benefit-arrow w-10 h-10 rounded-full border border-[#E0E0D9] bg-white text-[#6F00FF] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Row 03 -->
+        <div class="benefit-row py-6 sm:py-7 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer">
+          <div class="flex items-center gap-6 sm:gap-10">
+            <span class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] tracking-wider">03</span>
+            <p class="font-heading font-bold text-lg sm:text-2xl text-[#171827]">
+              Your life will become <span class="text-[#6F00FF]">EASIER</span>.
+            </p>
+          </div>
+          <div
+            class="benefit-arrow w-10 h-10 rounded-full border border-[#E0E0D9] bg-white text-[#6F00FF] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Row 04 -->
+        <div class="benefit-row py-6 sm:py-7 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer">
+          <div class="flex items-center gap-6 sm:gap-10">
+            <span class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] tracking-wider">04</span>
+            <p class="font-heading font-bold text-lg sm:text-2xl text-[#171827]">
+              You will not be <span class="text-[#6F00FF]">STRESSED</span> all the time.
+            </p>
+          </div>
+          <div
+            class="benefit-arrow w-10 h-10 rounded-full border border-[#E0E0D9] bg-white text-[#6F00FF] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Row 05 -->
+        <div class="benefit-row py-6 sm:py-7 px-4 sm:px-6 flex items-center justify-between gap-4 cursor-pointer">
+          <div class="flex items-center gap-6 sm:gap-10">
+            <span class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] tracking-wider">05</span>
+            <p class="font-heading font-bold text-lg sm:text-2xl text-[#171827]">
+              You will stop wasting money on <span class="text-[#6F00FF]">SALARIES AND HUGE BILLS</span>.
+            </p>
+          </div>
+          <div
+            class="benefit-arrow w-10 h-10 rounded-full border border-[#E0E0D9] bg-white text-[#6F00FF] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tagline with small purple dot -->
+      <div class="mt-12 flex items-center gap-3">
+        <span class="w-3 h-3 rounded-full bg-[#6F00FF] inline-block flex-shrink-0 animate-pulse"></span>
+        <span class="font-heading font-extrabold text-sm sm:text-base tracking-[0.1em] text-[#171827] uppercase">
+          WORK SMARTER. GROW FASTER. SPEND LESS.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. WHAT WE DO? (SECTION TWO: SERVICES WE PROVIDE)
+       ======================================================== -->
+  <section class="py-16 sm:py-24 bg-white border-t border-[#E0E0D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+      <!-- Section Heading & Paragraph -->
+      <div class="max-w-3xl mb-12 sm:mb-16">
+        <h2
+          class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#171827] tracking-tight uppercase mb-4">
+          SERVICES WE <span class="text-[#6F00FF]">PROVIDE</span>
+        </h2>
+        <p class="text-base sm:text-lg text-[#666660]">
+          Our only objective is to give you the advantages of modern-day technology, so that you can grow faster and at
+          a lower cost.
+        </p>
+      </div>
+
+      <!-- Two Large Service Cards Side by Side on Desktop, Stacked on Mobile/Tablet -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- CARD 1: AI AUTOMATION (White Background) -->
+        <article
+          class="service-card bg-[#FFFFFF] border border-[#E0E0D9] rounded-lg p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <!-- Top meta: Icon + Service Label -->
+            <div class="flex items-center justify-between mb-8">
+              <div class="w-14 h-14 rounded-md bg-[#6F00FF] text-white flex items-center justify-center shadow-md">
+                <!-- Automation Cog/AI Brain Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span class="font-heading font-extrabold text-xs tracking-[0.15em] text-[#666660] uppercase">
+                SERVICE 01
+              </span>
+            </div>
+
+            <!-- Heading & Short Description -->
+            <h3 class="font-heading font-black text-2xl sm:text-3xl text-[#171827] uppercase tracking-tight mb-3">
+              AI AUTOMATION
+            </h3>
+            <p class="text-base text-[#666660] leading-relaxed mb-10">
+              We identify repetitive work and build intelligent systems that help your business do more with less
+              effort.
+            </p>
+
+            <!-- 5-Step Infographic Timeline -->
+            <div class="space-y-6 mb-10 pl-1">
+
+              <!-- Step 01 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">01</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Understand Your Business</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We analyse your workflow, challenges, and goals.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 02 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">02</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Plan for the Best ROI</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We create a strategy focused on measurable
+                    results.</p>
+                </div>
+              </div>
+
+              <!-- Step 03 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">03</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">You Give Your Feedback</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We refine the plan based on your ideas and
+                    priorities.</p>
+                </div>
+              </div>
+
+              <!-- Step 04 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">04</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">We Implement the System</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We build and integrate the automation into your
+                    workflow.</p>
+                </div>
+              </div>
+
+              <!-- Step 05 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="step-marker">05</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Long-Term Maintenance</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We monitor, maintain, and improve your system over
+                    time.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Call to Action Link -->
+          <div class="pt-6 border-t border-[#E0E0D9]">
+            <a href="#contact"
+              class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] hover:text-[#5900CC] tracking-wide inline-flex items-center gap-2 group transition">
+              AUTOMATE YOUR BUSINESS &nearr;
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: CUSTOM SOFTWARE (Off-White Background) -->
+        <article
+          class="service-card bg-[#F8F8F4] border border-[#E0E0D9] rounded-lg p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <!-- Top meta: Icon + Service Label -->
+            <div class="flex items-center justify-between mb-8">
+              <div class="w-14 h-14 rounded-md bg-[#6F00FF] text-white flex items-center justify-center shadow-md">
+                <!-- Custom Software Code Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <span class="font-heading font-extrabold text-xs tracking-[0.15em] text-[#666660] uppercase">
+                SERVICE 02
+              </span>
+            </div>
+
+            <!-- Heading & Short Description -->
+            <h3 class="font-heading font-black text-2xl sm:text-3xl text-[#171827] uppercase tracking-tight mb-3">
+              CUSTOM SOFTWARE
+            </h3>
+            <p class="text-base text-[#666660] leading-relaxed mb-10">
+              We build software around your specific business needs, helping you solve problems with efficient,
+              practical solutions.
+            </p>
+
+            <!-- 5-Step Infographic Timeline -->
+            <div class="space-y-6 mb-10 pl-1">
+
+              <!-- Step 01 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">01</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Understand Your Problem</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We learn how your business works and what needs to
+                    improve.</p>
+                </div>
+              </div>
+
+              <!-- Step 02 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">02</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Find the Best Solution</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We plan the most efficient approach for your
+                    requirements.</p>
+                </div>
+              </div>
+
+              <!-- Step 03 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">03</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">You Give Your Feedback</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We align the proposed solution with your
+                    expectations.</p>
+                </div>
+              </div>
+
+              <!-- Step 04 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="timeline-track"></div>
+                <div class="step-marker">04</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">We Build Your Software</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We develop, test, and deliver software tailored to
+                    you.</p>
+                </div>
+              </div>
+
+              <!-- Step 05 -->
+              <div class="timeline-item flex items-start gap-4">
+                <div class="step-marker">05</div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-[#171827]">Ongoing Maintenance</h4>
+                  <p class="text-xs sm:text-sm text-[#666660] mt-0.5">We keep your software reliable, secure, and up to
+                    date.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Call to Action Link -->
+          <div class="pt-6 border-t border-[#E0E0D9]">
+            <a href="#contact"
+              class="font-heading font-extrabold text-sm sm:text-base text-[#6F00FF] hover:text-[#5900CC] tracking-wide inline-flex items-center gap-2 group transition">
+              BUILD YOUR SOLUTION &nearr;
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       8. ABOUT US SECTION (Founder Introduction & Story)
+       ======================================================== -->
+  <section id="about-us" class="scroll-mt-24 py-16 sm:py-24 bg-[#F8F8F4] border-t border-[#E0E0D9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+        <!-- Left Column: Founder Portrait Poster (about-us.png) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div
+            class="w-full max-w-md bg-white rounded-lg p-2.5 sm:p-3 border border-[#E0E0D9] shadow-md overflow-hidden">
+            <img src="about-us.png" alt="Molla Md Takrim - Founder, Takrim AI Studio"
+              class="w-full h-auto rounded object-cover transition duration-300 hover:scale-[1.01]" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Right Column: Founder's Story & Direct Message -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <h2
+            class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#171827] uppercase tracking-tight mb-8 leading-[1.12]">
+            I Run the Business, So Let Me Introduce Myself.
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-base sm:text-lg text-[#252525] leading-relaxed">
+            <p>
+              I am obsessed with designing efficient systems. I am using this obsession to make money.
+            </p>
+
+            <p class="font-heading font-bold text-lg sm:text-xl text-[#171827] pt-2">
+              But what about you? What can I do for you?
+            </p>
+
+            <p>
+              I can make you grow faster and cheaper.
+            </p>
+
+            <p>
+              I can give you time for your family.
+            </p>
+
+            <p>
+              I can make your team happy and less stressed.
+            </p>
+
+            <p>
+              I can make you less stressed.
+            </p>
+
+            <p>
+              I am not a witch. I do these things using AI and other adjacent services.
+            </p>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#E0E0D9] flex flex-wrap items-center gap-4">
+            <a href="#contact" class="btn-primary px-8 py-4 text-xs sm:text-sm tracking-wider uppercase font-heading">
+              LET'S GROW YOUR BUSINESS
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       9. CONTACT US (CALL TO ACTION SECTION)
+       High-contrast, direct-response urgency
+       ======================================================== -->
+  <section id="contact" class="py-20 sm:py-28 bg-[#171827] text-white relative overflow-hidden">
+    <!-- Subtle energetic purple ambient accent -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#6F00FF]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10 text-center">
+
+      <!-- Headline -->
+      <h2 class="font-heading font-black text-2xl sm:text-4xl lg:text-5xl tracking-tight uppercase mb-8 leading-tight">
+        YOUR COMPETITORS <span class="text-[#6F00FF]">WILL USE AI.</span><br class="hidden sm:inline">
+        IF YOU DON’T, YOU WILL STAY SO FAR BEHIND THAT YOU WILL <span class="text-[#6F00FF]">VANISH INTO THIN
+          AIR.</span>
+      </h2>
+
+      <!-- Normal Paragraphs -->
+      <div class="space-y-3 sm:space-y-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CCCCCC] leading-relaxed mb-12">
+        <p>
+          IT’S LIKE REJECTING THE INTERNET IN THE MODERN DAY.
+        </p>
+        <p>
+          OR, YOU CAN USE AI NOW TO GET AHEAD.
+        </p>
+        <p>
+          YOUR FUTURE IS LOOKING AT THIS DECISION.
+        </p>
+        <p>
+          REACH OUT DIRECTLY AND SECURE YOUR FUTURE.
+        </p>
+      </div>
+
+      <!-- Contact Options Grid: Phone & Email Displayed, WhatsApp as Action Button -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto items-stretch">
+
+        <!-- Option 1: Direct Phone (Shown) -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <span class="font-heading font-extrabold text-xs uppercase tracking-wider text-[#A1A1AA] mb-1.5">PHONE</span>
+          <span class="font-heading font-black text-xl text-white tracking-wider">8900507436</span>
+          <span class="text-xs text-[#888888] mt-1">Direct Line</span>
+        </div>
+
+        <!-- Option 2: WhatsApp (Active Button with 'I want to talk' message) -->
+        <a href="https://wa.me/917908707926?text=I%20want%20to%20talk" target="_blank" rel="noopener noreferrer"
+          class="btn-primary bg-[#6F00FF] hover:bg-[#5900CC] border-2 border-[#6F00FF] rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-xl hover:scale-[1.03] transition-all group cursor-pointer ring-4 ring-[#6F00FF]/25">
+          <div
+            class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-3 text-white group-hover:scale-110 transition">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.777.838 2.791.838 3.181 0 5.768-2.587 5.768-5.767 0-3.18-2.587-5.767-5.768-5.767zm0 10.428c-.887 0-1.59-.247-2.319-.68l-.165-.098-1.724.452.46-1.679-.108-.172c-.482-.767-.736-1.554-.736-2.485 0-2.569 2.09-4.659 4.66-4.659 2.569 0 4.659 2.09 4.659 4.66 0 2.57-2.09 4.661-4.66 4.661zm3.178-3.488c-.174-.087-1.031-.509-1.19-.567-.16-.059-.276-.088-.393.088-.117.175-.451.567-.553.684-.102.117-.204.132-.378.044-.174-.088-.737-.272-1.403-.866-.518-.462-.868-1.033-.97-1.208-.102-.175-.011-.269.076-.356.079-.079.174-.204.262-.307.087-.102.116-.175.174-.291.059-.117.029-.219-.015-.307-.044-.088-.393-.948-.539-1.299-.142-.341-.286-.295-.393-.3l-.335-.006c-.116 0-.306.044-.466.219-.16.175-.612.598-.612 1.458 0 .86.626 1.691.713 1.808.088.117 1.233 1.883 2.987 2.64.417.181.743.289.998.37.419.133.8.114 1.101.069.336-.05 1.031-.422 1.176-.829.145-.407.145-.757.102-.829-.044-.073-.16-.117-.335-.205z" />
+            </svg>
+          </div>
+          <span class="font-heading font-black text-xs uppercase tracking-widest text-white/90 mb-1">WHATSAPP</span>
+          <span class="font-heading font-black text-xl text-white tracking-wider">7908707926</span>
+          <span
+            class="mt-3 text-xs font-heading font-extrabold bg-white text-[#6F00FF] px-4 py-1.5 rounded tracking-wider uppercase shadow">CHAT
+            NOW &rarr;</span>
+        </a>
+
+        <!-- Option 3: Direct Email (Shown) -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span class="font-heading font-extrabold text-xs uppercase tracking-wider text-[#A1A1AA] mb-1.5">EMAIL</span>
+          <span
+            class="font-heading font-bold text-sm sm:text-base text-white tracking-tight break-all">takrimaistudio001@gmail.com</span>
+          <span class="text-xs text-[#888888] mt-1">Official Inbox</span>
+        </div>
+
+      </div>
+
+      <!-- Social Media Profiles (Directly below contact options) -->
+      <div class="mt-12 flex flex-col items-center justify-center">
+        <span class="font-heading font-extrabold text-xs uppercase tracking-widest text-[#A1A1AA] mb-4">
+          CONNECT ON SOCIAL MEDIA
+        </span>
+        <div class="flex items-center justify-center gap-4 sm:gap-5 flex-wrap">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/molla-md-takrim/" target="_blank" rel="noopener noreferrer"
+            aria-label="Takrim on LinkedIn"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+          </a>
+          <!-- X / Twitter -->
+          <a href="https://x.com/TakrimMolla1" target="_blank" rel="noopener noreferrer" aria-label="Takrim on X"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/molla_md._takrim/" target="_blank" rel="noopener noreferrer"
+            aria-label="Takrim on Instagram"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61560457536107" target="_blank" rel="noopener noreferrer"
+            aria-label="Takrim on Facebook"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@Takrim_Human" target="_blank" rel="noopener noreferrer"
+            aria-label="Takrim on YouTube"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#6F00FF] text-white flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       10. NORMAL FOOTER
+       ======================================================== -->
+  <footer class="bg-[#000000] text-white py-12 border-t border-[#222222]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-[#222222]">
+
+        <!-- Brand -->
+        <div class="text-center md:text-left">
+          <a href="#home" class="font-heading font-black text-2xl tracking-wider text-white">
+            TAKRIM AI STUDIO
+          </a>
+          <p class="text-xs sm:text-sm text-[#888888] mt-1 max-w-sm">
+            AI automation and analysis-based custom software development for growing businesses.
+          </p>
+        </div>
+
+        <!-- Footer Nav (ALL CAPITALS) -->
+        <ul
+          class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-bold font-heading uppercase tracking-wider text-[#CCCCCC]">
+          <li><a href="#home" class="hover:text-[#6F00FF] transition">HOME</a></li>
+          <li><a href="#peoples-thoughts" class="hover:text-[#6F00FF] transition">PEOPLE’S THOUGHTS</a></li>
+          <li><a href="#our-work" class="hover:text-[#6F00FF] transition">OUR WORK</a></li>
+          <li><a href="#what-we-do" class="hover:text-[#6F00FF] transition">WHAT WE DO?</a></li>
+          <li><a href="#about-us" class="hover:text-[#6F00FF] transition">ABOUT US</a></li>
+          <li><a href="#contact" class="hover:text-[#6F00FF] transition">CONTACT US</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="pt-8 text-xs text-[#777777] text-center font-medium">
+        <p>&copy; 2026 Takrim AI Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button id="scrollToTopBtn" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#171827] text-white border border-white/20 shadow-2xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#6F00FF] hover:scale-110 cursor-pointer">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <!-- ========================================================
+       JAVASCRIPT LOGIC
+       ======================================================== -->
+  <script>
+    // ----------------------------------------------------
+    // 1. Mobile & Tablet Slide Menu Drawer Logic
+    // ----------------------------------------------------
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMobileDrawer() {
+      mobileDrawer.classList.remove('-translate-x-full');
+      mobileDrawerBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+      if (window.lenis) window.lenis.stop();
+    }
+
+    function closeMobileDrawer() {
+      mobileDrawer.classList.add('-translate-x-full');
+      mobileDrawerBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+      if (window.lenis) window.lenis.start();
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', openMobileDrawer);
+    }
+    if (closeDrawerBtn) {
+      closeDrawerBtn.addEventListener('click', closeMobileDrawer);
+    }
+    if (mobileDrawerBackdrop) {
+      mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+    }
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // ----------------------------------------------------
+    // 2. Hero Video Autoplay + Mute/Unmute & Restart Logic
+    // "By default, it will be muted, but when someone unmutes it,
+    //  it will start from the beginning."
+    // ----------------------------------------------------
+    const heroVideo = document.getElementById('heroVideo');
+    const heroMuteBtn = document.getElementById('heroMuteBtn');
+    const heroMuteIcon = document.getElementById('heroMuteIcon');
+    const heroMuteLabel = document.getElementById('heroMuteLabel');
+
+    if (heroVideo && heroMuteBtn) {
+      // Ensure muted on startup for reliable autoplay
+      heroVideo.muted = true;
+
+      heroMuteBtn.addEventListener('click', () => {
+        if (heroVideo.muted) {
+          // Unmute and restart from the beginning as specified
+          heroVideo.currentTime = 0;
+          heroVideo.muted = false;
+          heroVideo.play().catch(e => console.log('Autoplay policy caught:', e));
+
+          heroMuteLabel.textContent = 'MUTE';
+          heroMuteIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          `;
+        } else {
+          // Mute back
+          heroVideo.muted = true;
+          heroMuteLabel.textContent = 'UNMUTE';
+          heroMuteIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          `;
+        }
+      });
+    }
+
+    // ----------------------------------------------------
+    // 3. Numbers Section: Smooth Animation on Scroll
+    // ----------------------------------------------------
+    const statElements = document.querySelectorAll('.stat-number');
+    let statsAnimated = false;
+
+    function animateStats() {
+      statElements.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        let start = 0;
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function updateNumber(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target);
+
+          if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+          } else {
+            el.textContent = target;
+          }
+        }
+        requestAnimationFrame(updateNumber);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          animateStats();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const numbersSection = document.querySelector('.stat-number');
+    if (numbersSection) {
+      observer.observe(numbersSection.closest('section'));
+    }
+
+    // ----------------------------------------------------
+    // 4. Testimonials Video Player Logic (No specific thumbnail)
+    // ----------------------------------------------------
+    const videoCard = document.getElementById("videoTestimonial");
+    const playButton = document.getElementById("playTestimonial");
+    const testimonialVideo = document.getElementById("testimonialVideo");
+    const testimonialOverlay = document.getElementById("testimonialOverlay");
+    const testimonialAuthor = document.getElementById("testimonialAuthor");
+
+    if (playButton && testimonialVideo) {
+      playButton.addEventListener("click", () => {
+        testimonialVideo.controls = true;
+        testimonialVideo.style.zIndex = "5";
+        playButton.style.display = "none";
+        if (testimonialOverlay) testimonialOverlay.style.display = "none";
+        if (testimonialAuthor) testimonialAuthor.style.display = "none";
+
+        testimonialVideo.play().catch(() => {
+          testimonialVideo.controls = true;
+        });
+      });
+    }
+
+    // ----------------------------------------------------
+    // 5. Smooth Scroll Engine (Lenis & Anchor Handler)
+    // ----------------------------------------------------
+    let lenis = null;
+    if (typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth Apple-style deceleration curve
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5,
+        infinite: false,
+      });
+      window.lenis = lenis;
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+
+    // Smooth Anchor Link Gliding with Sticky Header Offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.length > 1 && href.startsWith('#')) {
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            closeMobileDrawer();
+            if (lenis) {
+              lenis.scrollTo(targetEl, { offset: -80, duration: 1.2 });
+            } else {
+              const headerOffset = 80;
+              const elementPosition = targetEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        }
+      });
+    });
+
+    // Top Reading Scroll Progress Bar
+    const progressBar = document.getElementById('scrollProgressBar');
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+      }, { passive: true });
+    }
+
+    // Floating Scroll-to-Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          scrollToTopBtn.classList.add('opacity-100');
+        } else {
+          scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+          scrollToTopBtn.classList.remove('opacity-100');
+        }
+      }, { passive: true });
+
+      scrollToTopBtn.addEventListener('click', () => {
+        if (lenis) {
+          lenis.scrollTo(0, { duration: 1.2 });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
